@@ -1,0 +1,90 @@
+Enhanced SARS-CoV-2 Variant Surveillance Report
+=======================================================
+
+Analysis Summary:
+- Total sequences analyzed: 228
+- CRITICAL risk sequences: 0
+- HIGH risk sequences: 191
+- MEDIUM risk sequences: 37
+- LOW risk sequences: 0
+
+HIGH RISK SEQUENCES:
+--------------------
+
+Sequence: PQ725855.1
+Lineage: XEC.2
+Total Score: 0.701
+Components: R=1.00, M=1.00, G=0.01
+Flags: Known recombinant lineage: XEC.2; Unusual insertion pattern: 72 leading gaps; High-risk mutation detected: P681H; High-risk mutation detected: P681R; High-risk mutation detected: Q493E; Missing XEC.2 signatures: F456L; Unexpected mutations in XEC.2: P681R, P681H; Multiple high-risk mutations: 3 detected; Recent high-concern mutations: Q493E
+
+Sequence: PQ784161.1
+Lineage: XEC.2
+Total Score: 0.701
+Components: R=1.00, M=1.00, G=0.01
+Flags: Known recombinant lineage: XEC.2; Unusual insertion pattern: 78 leading gaps; High-risk mutation detected: P681H; High-risk mutation detected: P681R; High-risk mutation detected: Q493E; Missing XEC.2 signatures: F456L; Unexpected mutations in XEC.2: P681R, P681H; Multiple high-risk mutations: 3 detected; Recent high-concern mutations: Q493E
+
+Sequence: PQ450709.1
+Lineage: XEC.2
+Total Score: 0.701
+Components: R=1.00, M=1.00, G=0.00
+Flags: Known recombinant lineage: XEC.2; Unusual insertion pattern: 78 leading gaps; High-risk mutation detected: P681H; High-risk mutation detected: P681R; High-risk mutation detected: Q493E; Missing XEC.2 signatures: F456L; Unexpected mutations in XEC.2: P681R, P681H; Multiple high-risk mutations: 3 detected; Recent high-concern mutations: Q493E
+
+Sequence: PQ461606.1
+Lineage: XEC.2
+Total Score: 0.701
+Components: R=1.00, M=1.00, G=0.00
+Flags: Known recombinant lineage: XEC.2; Unusual insertion pattern: 72 leading gaps; High-risk mutation detected: P681H; High-risk mutation detected: P681R; High-risk mutation detected: Q493E; Missing XEC.2 signatures: F456L; Unexpected mutations in XEC.2: P681R, P681H; Multiple high-risk mutations: 3 detected; Recent high-concern mutations: Q493E
+
+Sequence: PQ640317.1
+Lineage: XEC.2
+Total Score: 0.701
+Components: R=1.00, M=1.00, G=0.00
+Flags: Known recombinant lineage: XEC.2; Unusual insertion pattern: 78 leading gaps; High-risk mutation detected: P681H; High-risk mutation detected: P681R; High-risk mutation detected: Q493E; Missing XEC.2 signatures: F456L; Unexpected mutations in XEC.2: P681R, P681H; Multiple high-risk mutations: 3 detected; Recent high-concern mutations: Q493E
+
+Sequence: LC910993.1
+Lineage: XEC.2
+Total Score: 0.701
+Components: R=1.00, M=1.00, G=0.00
+Flags: Known recombinant lineage: XEC.2; Unusual insertion pattern: 78 leading gaps; High-risk mutation detected: P681H; High-risk mutation detected: P681R; High-risk mutation detected: Q493E; Missing XEC.2 signatures: F456L; Unexpected mutations in XEC.2: P681R, P681H; Multiple high-risk mutations: 3 detected; Recent high-concern mutations: Q493E
+
+Sequence: PQ535950.1
+Lineage: XEC.2
+Total Score: 0.701
+Components: R=1.00, M=1.00, G=0.00
+Flags: Known recombinant lineage: XEC.2; Unusual insertion pattern: 55 leading gaps; High-risk mutation detected: P681H; High-risk mutation detected: P681R; High-risk mutation detected: Q493E; Missing XEC.2 signatures: F456L; Unexpected mutations in XEC.2: P681R, P681H; Multiple high-risk mutations: 3 detected; Recent high-concern mutations: Q493E
+
+Sequence: PV998391.1
+Lineage: XEC.2
+Total Score: 0.701
+Components: R=1.00, M=1.00, G=0.00
+Flags: Known recombinant lineage: XEC.2; Unusual insertion pattern: 113 leading gaps; High-risk mutation detected: P681H; High-risk mutation detected: P681R; High-risk mutation detected: Q493E; Missing XEC.2 signatures: F456L; Unexpected mutations in XEC.2: P681R, P681H; Multiple high-risk mutations: 3 detected; Recent high-concern mutations: Q493E
+
+Sequence: PQ787154.1
+Lineage: XEC.2
+Total Score: 0.701
+Components: R=1.00, M=1.00, G=0.00
+Flags: Known recombinant lineage: XEC.2; Unusual insertion pattern: 72 leading gaps; High-risk mutation detected: P681H; High-risk mutation detected: P681R; High-risk mutation detected: Q493E; Missing XEC.2 signatures: F456L; Unexpected mutations in XEC.2: P681R, P681H; Multiple high-risk mutations: 3 detected; Recent high-concern mutations: Q493E
+
+Sequence: PQ737487.1
+Lineage: XEC.2
+Total Score: 0.701
+Components: R=1.00, M=1.00, G=0.00
+Flags: Known recombinant lineage: XEC.2; Unusual insertion pattern: 102 leading gaps; High-risk mutation detected: P681H; High-risk mutation detected: P681R; High-risk mutation detected: Q493E; Missing XEC.2 signatures: F456L; Unexpected mutations in XEC.2: P681R, P681H; Multiple high-risk mutations: 3 detected; Recent high-concern mutations: Q493E
+
+TOP 15 HIGHEST SCORING SEQUENCES:
+-----------------------------------
+ 1. PQ725855.1 (XEC.2) - Score: 0.701 - HIGH
+ 2. PQ784161.1 (XEC.2) - Score: 0.701 - HIGH
+ 3. PQ450709.1 (XEC.2) - Score: 0.701 - HIGH
+ 4. PQ461606.1 (XEC.2) - Score: 0.701 - HIGH
+ 5. PQ640317.1 (XEC.2) - Score: 0.701 - HIGH
+ 6. LC910993.1 (XEC.2) - Score: 0.701 - HIGH
+ 7. PQ535950.1 (XEC.2) - Score: 0.701 - HIGH
+ 8. PV998391.1 (XEC.2) - Score: 0.701 - HIGH
+ 9. PQ787154.1 (XEC.2) - Score: 0.701 - HIGH
+10. PQ737487.1 (XEC.2) - Score: 0.701 - HIGH
+11. PQ810117.1 (XEC.2) - Score: 0.701 - HIGH
+12. PQ615063.1 (XEC.2) - Score: 0.701 - HIGH
+13. PX052150.1 (XEC.2) - Score: 0.701 - HIGH
+14. PQ791537.1 (XEC.2) - Score: 0.701 - HIGH
+15. PQ810164.1 (XEC.2) - Score: 0.701 - HIGH

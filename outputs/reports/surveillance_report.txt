@@ -1,0 +1,23 @@
+SARS-CoV-2 Variant Surveillance Report
+==================================================
+
+Analysis Summary:
+- Total sequences analyzed: 228
+- HIGH risk sequences: 0
+- MEDIUM risk sequences: 226
+- LOW risk sequences: 2
+
+
+
+TOP 10 HIGHEST SCORING SEQUENCES:
+-----------------------------------
+ 1. OZ206628.1 (XEC.2) - Score: 0.618 - MEDIUM
+ 2. OZ206657.1 (XEC.2) - Score: 0.616 - MEDIUM
+ 3. OZ203006.1 (XEC.2) - Score: 0.613 - MEDIUM
+ 4. OZ216807.1 (XEC.2) - Score: 0.605 - MEDIUM
+ 5. OZ210688.1 (XEC.2) - Score: 0.603 - MEDIUM
+ 6. OZ202330.1 (XEC.2) - Score: 0.593 - MEDIUM
+ 7. OZ209794.1 (XEC.2) - Score: 0.591 - MEDIUM
+ 8. OZ216815.1 (XEC.2) - Score: 0.588 - MEDIUM
+ 9. OZ197414.1 (XEC.2) - Score: 0.588 - MEDIUM
+10. OZ216835.1 (XEC.2) - Score: 0.587 - MEDIUM
