@@ -37,8 +37,36 @@ class SequenceInfo:
     
     def extract_country_from_title(self) -> Optional[str]:
         """Extract country code from virus title"""
-        match = re.search(r'SARS-CoV-2/[^/]*/([^/]+)/', self.title)
-        return match.group(1) if match else None
+        if not self.title:
+            return None
+        
+        # Multiple patterns for country extraction
+        patterns = [
+            r'SARS-CoV-2/([^/]+)/',  # SARS-CoV-2/Country/...
+            r'/([A-Z]{2,3})/',       # /USA/ or /GBR/
+            r'hCoV-19/([^/]+)/',     # GISAID format
+        ]
+        
+        for pattern in patterns:
+            match = re.search(pattern, self.title)
+            if match:
+                country = match.group(1).strip()
+                # Clean up common country codes
+                country_mapping = {
+                    'USA': 'United States',
+                    'GBR': 'United Kingdom', 
+                    'UK': 'United Kingdom',
+                    'CHN': 'China',
+                    'IND': 'India',
+                    'DEU': 'Germany',
+                    'FRA': 'France',
+                    'CAN': 'Canada',
+                    'AUS': 'Australia',
+                    'JPN': 'Japan'
+                }
+                return country_mapping.get(country, country)
+        
+        return None
 
 def parse_fasta_header(header: str) -> SequenceInfo:
     """
@@ -399,7 +427,11 @@ def dashboard_page():
                 lineages = set(seq_info.pangolin_lineage for seq_info, _ in sequences)
                 st.metric("Unique Lineages", len(lineages))
             with col4:
-                countries = set(seq_info.country for seq_info, _ in sequences if seq_info.country)
+                # Better country counting
+                countries = set()
+                for seq_info, _ in sequences:
+                    if seq_info.country and seq_info.country.strip() and seq_info.country != "Unknown":
+                        countries.add(seq_info.country.strip())
                 st.metric("Countries", len(countries))
             
             # Lineage distribution
@@ -451,10 +483,11 @@ def dashboard_page():
                 
                 col1, col2 = st.columns(2)
                 with col1:
+                    # FIXED: Use nbins instead of bins for Plotly
                     fig = px.histogram(
                         df_quality, 
                         x='Completeness',
-                        bins=20,
+                        nbins=20,  # Changed from bins=20 to nbins=20
                         title="Sequence Completeness Distribution"
                     )
                     st.plotly_chart(fig, use_container_width=True)
@@ -466,6 +499,25 @@ def dashboard_page():
                         title="Gap Percentage Distribution"
                     )
                     st.plotly_chart(fig, use_container_width=True)
+            
+            # Country distribution (if we have country data)
+            country_data = []
+            for seq_info, _ in sequences:
+                if seq_info.country and seq_info.country.strip() and seq_info.country != "Unknown":
+                    country_data.append(seq_info.country.strip())
+            
+            if country_data:
+                st.subheader("Geographic Distribution")
+                country_counts = pd.Series(country_data).value_counts()
+                if len(country_counts) > 1:
+                    fig = px.pie(
+                        values=country_counts.values,
+                        names=country_counts.index,
+                        title="Sequences by Country"
+                    )
+                    st.plotly_chart(fig, use_container_width=True)
+                else:
+                    st.info("Country information limited - most sequences lack geographic metadata")
         
         else:
             st.warning("No surveillance data found at data/MAIN.fasta")
@@ -639,12 +691,12 @@ def analyze_uploaded_sequences(file_path: str, filter_quality: bool, min_complet
                     st.plotly_chart(fig, use_container_width=True)
                 
                 with col2:
-                    # Quality distribution
+                    # Quality distribution - FIXED: Use nbins instead of bins
                     df_results['Completeness_Float'] = df_results['Completeness'].str.rstrip('%').astype(float) / 100
                     fig = px.histogram(
                         df_results,
                         x='Completeness_Float',
-                        nbins=20,
+                        nbins=20,  # Changed from bins=20 to nbins=20
                         title="Quality Distribution"
                     )
                     fig.update_xaxis(title="Completeness")
@@ -824,8 +876,8 @@ def about_page():
     
     ## Development Team
     
-    **Developer**: Tobi Lawal (tobilawal091@gmail.com)  
-    **Institution**: Emory University - Dr. Seema Lakdawala's Lab  
+    **Developer**: Tobi Lawal (Tlawal5@emory.edu)  
+    **Institution**: Emory University
     **Purpose**: Pandemic Preparedness Research
     
     ## Impact & Applications
